@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cubic demo</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:;base64,="> <!-- Prevent request to favicon -->
+  <script src="main.js"></script>
+  <!-- <script src="https://unpkg.com/mathjs@8.0.0/lib/browser/math.js"></script> -->
+  <script src="assets/math.js"></script>
+  <script src="assets/mathjs.shim.js"></script>
+  <script src="assets/observable-0.5.6.js"></script>
+  <style>
+    #container {
+      display: flex;
+      flex-direction: row;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="graph-container">
+      <svg id="graph" width=512 height=512 viewBox="-10 -10 120 120">
+        <line x1="0" y1="100" x2="0" y2="0" stroke="black" stroke-width=0.5 />
+        <line x1="0" y1="100" x2="100" y2="100" stroke="black" stroke-width=0.5 />
+        <line x1="0" y1="0" x2="100" y2="0" stroke-dasharray="1,1" stroke="black" stroke-width=0.5 />
+        <circle id="p0" cx="0" cy="75" r="1" stroke="black" fill="black" stroke-width="0.5"/>
+        <circle id="p1" cx="33" cy="50" r="1" stroke="black" fill="black" stroke-width="0.5"/>
+        <circle id="p2" cx="66" cy="90" r="1" stroke="black" fill="black" stroke-width="0.5"/>
+        <circle id="p3" cx="100" cy="25" r="1" stroke="black" fill="black" stroke-width="0.5"/>
+      </svg>
+    </div>
+    <div id="controls">
+      <button id="capture-button">Capture this curve as a url</button>
+    </div>
+  </div>
+</body>
+</html>
